@@ -1,0 +1,176 @@
+/* Home Page Styles - Scoped to .home-page */
+.home-page .home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff; /* White Background */
+  color: #333; /* Dark Gray Text */
+}
+
+/* Intro Section */
+.home-page .intro-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ff6f61, #ffcc5c); /* Warm Orange-Red Gradient */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.home-page .intro-section h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.home-page .intro-text {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  margin-bottom: 1.5rem;
+}
+
+.home-page .donate-btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, #ff9800, #ff3d00);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-page .donate-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Donation Progress Section */
+.home-page .donation-progress {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.home-page .donation-progress h2 {
+  font-size: 2.2rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+.home-page .progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  overflow: hidden;
+  height: 25px;
+  margin-bottom: 1rem;
+}
+
+.home-page .progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ff9800, #ff3d00);
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+.home-page .stats {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Goal Details Section */
+.home-page .goal-details {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.home-page .goal-info {
+  display: inline-block;
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Donation Information Section */
+.home-page .donation-info {
+  margin: 2rem 0;
+  line-height: 1.8;
+  color: #333;
+}
+
+.home-page .donation-info h2 {
+  font-size: 2.2rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+.home-page .donation-info h3 {
+  font-size: 1.8rem;
+  color: #42a5f5;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-page .donation-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.home-page .donation-info ul {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-page .donation-info li {
+  margin-bottom: 0.5rem;
+}
+
+/* Green Donate Button */
+.home-page .donate-btn-green {
+  background: linear-gradient(45deg, #43a047, #00c853);
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-page .donate-btn-green:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-page .intro-section h1 {
+    font-size: 2rem;
+  }
+  
+  .home-page .intro-text {
+    font-size: 1rem;
+  }
+  
+  .home-page .donate-btn, .home-page .donate-btn-green {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .home-page .stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .home-page .stats span {
+    font-size: 0.9rem;
+  }
+}

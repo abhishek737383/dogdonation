@@ -1,0 +1,132 @@
+/* AdminDashboard.css */
+
+/* Base Styles for Admin Dashboard */
+.admin-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Headings */
+.admin-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2a2a72;
+}
+
+/* Upload Section */
+.upload-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.upload-section input[type="file"] {
+  padding: 0.5rem;
+  border: 2px solid #ffb347;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.upload-section input[type="file"]:focus {
+  outline: none;
+  border-color: #ff6f69;
+}
+
+.upload-section button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #ff6f69, #ffcc5c);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-section button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.upload-section button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Image List Section */
+.image-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual Image Item */
+.image-item {
+  position: relative;
+  background: #fefefe;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover {
+  transform: scale(1.02);
+}
+
+.image-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Delete Button on Image */
+.image-item button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 107, 105, 0.9);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-item:hover button {
+  opacity: 1;
+}
+
+.image-item button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 1rem;
+  }
+
+  .admin-container h1 {
+    font-size: 2rem;
+  }
+
+  .upload-section {
+    flex-direction: column;
+  }
+}

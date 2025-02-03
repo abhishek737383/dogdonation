@@ -1,0 +1,226 @@
+/* src/components/DonatePage.css */
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fafafa;
+  color: #333;
+}
+
+/* Main Container */
+.donate-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #74ABE2, #5563DE);
+}
+
+.donate-container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  padding: 40px 30px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headings & Text */
+.donate-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5563DE;
+  font-size: 2rem;
+}
+
+.donate-container p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Form Styles */
+.donate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donate-form label {
+  font-size: 0.95rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.donate-form input {
+  margin-top: 8px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+  font-size: 1rem;
+}
+
+.donate-form input:focus {
+  border-color: #5563DE;
+  outline: none;
+}
+
+/* Button Styles */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"],
+button:not(.back-button) {
+  background: #5563DE;
+  color: #fff;
+}
+
+button[type="submit"]:hover,
+button:not(.back-button):hover {
+  background: #4353B3;
+  transform: translateY(-3px);
+}
+
+.back-button {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.back-button:hover {
+  background: #ccc;
+}
+
+/* Error Message */
+.error-message {
+  background: #ffe0e0;
+  border: 1px solid #ff4d4d;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: #ff4d4d;
+  margin-bottom: 15px;
+}
+
+/* Payment Instructions Section */
+.payment-instructions {
+  text-align: center;
+}
+
+.payment-details {
+  margin-bottom: 20px;
+}
+
+.upi-section,
+.qr-section {
+  margin-bottom: 15px;
+}
+
+.upi-section p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.qr-code-img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 2px solid #5563DE;
+}
+
+.instructions {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.instructions h4 {
+  margin-bottom: 10px;
+  color: #5563DE;
+}
+
+.instructions ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* Confirmation Buttons */
+.confirmation-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Thank You Message */
+.thank-you-message {
+  text-align: center;
+}
+
+.thank-you-message h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #2ecc71;
+}
+
+.thank-you-message p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Loading Text Styling */
+.donate-container > p.loading {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .donate-container {
+    max-width: 600px;
+    padding: 50px 40px;
+  }
+
+  .donate-form {
+    gap: 25px;
+  }
+
+  .instructions li {
+    font-size: 1rem;
+  }
+
+  .confirmation-buttons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
